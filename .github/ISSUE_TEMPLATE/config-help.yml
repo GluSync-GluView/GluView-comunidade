@@ -1,0 +1,44 @@
+name: ⚙️ Ajuda com configuração
+description: Preciso de ajuda para configurar o app, portal ou uma integração.
+title: "[Configuração]: "
+labels: ["needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## ⚠️ Antes de continuar
+
+        Considere primeiro consultar a
+        [documentação](https://glusync-gluview.github.io/GluView-comunidade/) (seção de solução
+        de problemas e perguntas frequentes) — cobre os casos mais comuns.
+
+        Nunca inclua sua glicemia real, e-mail, senha ou token neste formulário.
+
+  - type: checkboxes
+    id: duplicate-check
+    attributes:
+      label: Busquei por duplicata
+      options:
+        - label: Procurei na documentação e nas issues/discussions existentes.
+          required: true
+
+  - type: textarea
+    id: goal
+    attributes:
+      label: O que você está tentando configurar?
+    validations:
+      required: true
+
+  - type: textarea
+    id: tried
+    attributes:
+      label: O que você já tentou?
+    validations:
+      required: true
+
+  - type: textarea
+    id: result
+    attributes:
+      label: O que aconteceu?
+    validations:
+      required: true

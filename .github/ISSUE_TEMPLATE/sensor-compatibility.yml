@@ -1,0 +1,55 @@
+name: 📡 Compatibilidade de sensor ou integração
+description: "Um sensor CGM, wearable ou integração (ex.: Nightscout) não funciona como esperado."
+title: "[Compatibilidade]: "
+labels: ["bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## ⚠️ Antes de continuar
+
+        **Nunca inclua** sua glicemia real, nome de paciente, token de integração (Nightscout
+        `api-secret`, token OAuth, API Key) ou captura de tela com dado de saúde visível. Use
+        valores sintéticos ao descrever o problema.
+
+  - type: checkboxes
+    id: duplicate-check
+    attributes:
+      label: Busquei por duplicata
+      options:
+        - label: Procurei nas issues existentes e não encontrei um relato igual a este.
+          required: true
+
+  - type: dropdown
+    id: sensor
+    attributes:
+      label: Sensor, wearable ou integração
+      options:
+        - Freestyle Libre 2 Plus
+        - Sibionics
+        - Mi Band (ou outro wearable)
+        - Nightscout (servidor ou cliente)
+        - API pública (API Key/OAuth)
+        - Outro (descreva abaixo)
+    validations:
+      required: true
+
+  - type: input
+    id: sensor-other
+    attributes:
+      label: Se escolheu "Outro", qual?
+
+  - type: input
+    id: version
+    attributes:
+      label: Versão do app/portal
+    validations:
+      required: true
+
+  - type: textarea
+    id: issue
+    attributes:
+      label: O que não está funcionando?
+      description: Passos, com dado sintético — nunca leitura real de glicemia.
+    validations:
+      required: true

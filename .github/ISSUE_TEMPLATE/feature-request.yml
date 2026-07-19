@@ -1,0 +1,53 @@
+name: ✨ Pedir uma funcionalidade
+description: Sugerir algo novo ou uma melhoria.
+title: "[Feature]: "
+labels: ["feature", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## ⚠️ Antes de continuar
+
+        Nunca inclua dado de saúde real, e-mail ou token neste formulário. Se preferir discutir a
+        ideia antes de formalizar um pedido, use
+        [Discussions](https://github.com/GluSync-GluView/GluView-comunidade/discussions).
+
+  - type: checkboxes
+    id: duplicate-check
+    attributes:
+      label: Busquei por duplicata
+      options:
+        - label: Procurei nas issues/discussions existentes e não encontrei um pedido igual.
+          required: true
+
+  - type: dropdown
+    id: product
+    attributes:
+      label: Qual produto?
+      options:
+        - GluView (app Android)
+        - GluSync (backend/API)
+        - GluWebView (portal web)
+        - Não sei / vários
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Qual problema isso resolveria?
+      description: Descreva a necessidade, não só a solução que você imagina.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: O que você propõe?
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternativas consideradas (opcional)

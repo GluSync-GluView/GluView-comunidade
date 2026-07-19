@@ -1,0 +1,91 @@
+name: 🐛 Reportar um bug
+description: Algo não está funcionando como esperado.
+title: "[Bug]: "
+labels: ["bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## ⚠️ Antes de continuar
+
+        **Nunca inclua** neste formulário: sua glicemia real, nome/e-mail de paciente, token,
+        senha, cookie de sessão, ou captura de tela com dado de saúde visível. Use valores
+        sintéticos e óbvios (ex.: `glicemia = 120`, `usuário teste`) ao descrever o problema.
+
+        Se o que você encontrou é uma **vulnerabilidade de segurança ou incidente de
+        privacidade**, feche este formulário e veja
+        [`SECURITY.md`](https://github.com/GluSync-GluView/GluView-comunidade/blob/main/SECURITY.md)
+        — nunca abra uma issue pública para isso.
+
+  - type: checkboxes
+    id: duplicate-check
+    attributes:
+      label: Busquei por duplicata
+      options:
+        - label: Procurei nas issues existentes e não encontrei um relato igual a este.
+          required: true
+
+  - type: dropdown
+    id: product
+    attributes:
+      label: Qual produto?
+      options:
+        - GluView (app Android)
+        - GluSync (backend/API)
+        - GluWebView (portal web)
+        - Não sei / vários
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Versão
+      description: Versão do app (Configurações → Sobre) ou data aproximada de acesso ao portal.
+      placeholder: "ex.: 1.4.2, ou 'portal em 19/07/2026'"
+    validations:
+      required: true
+
+  - type: input
+    id: environment
+    attributes:
+      label: Ambiente
+      description: Modelo do celular/Android, ou navegador/SO se for o portal web.
+      placeholder: "ex.: Samsung SM-S711B, Android 14"
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Passos para reproduzir
+      description: Use dados sintéticos nos exemplos, nunca dado real.
+      placeholder: |
+        1. Abra a tela X
+        2. Faça Y com um valor de teste (ex.: glicemia = 120)
+        3. Observe Z
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: O que você esperava que acontecesse?
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: O que aconteceu de fato?
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Log ou mensagem de erro (opcional)
+      description: >
+        Cole só o trecho relevante, nunca o log completo — revise antes de colar que não há
+        token, e-mail ou dado de saúde real no trecho.
+      render: text

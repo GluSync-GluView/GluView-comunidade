@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 Dúvida de uso ou sugestão
+    url: https://github.com/GluSync-GluView/GluView-comunidade/discussions
+    about: Para perguntas gerais e discussão aberta, use Discussions em vez de uma issue.
+  - name: 🔒 Vulnerabilidade de segurança ou incidente de privacidade
+    url: https://github.com/GluSync-GluView/GluView-comunidade/security/advisories/new
+    about: NUNCA abra uma issue pública para isso. Veja também SECURITY.md.

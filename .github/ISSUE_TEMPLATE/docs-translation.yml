@@ -1,0 +1,50 @@
+name: 📝 Erro de documentação ou tradução
+description: Algo na documentação está errado, desatualizado ou mal traduzido.
+title: "[Docs]: "
+labels: ["docs", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## ⚠️ Antes de continuar
+
+        Nunca inclua dado de saúde real neste formulário, mesmo como exemplo "corrigido".
+
+  - type: checkboxes
+    id: duplicate-check
+    attributes:
+      label: Busquei por duplicata
+      options:
+        - label: Procurei nas issues existentes e não encontrei um relato igual a este.
+          required: true
+
+  - type: dropdown
+    id: language
+    attributes:
+      label: Idioma da página
+      options:
+        - Português (pt-BR)
+        - English (en)
+        - Español (es)
+    validations:
+      required: true
+
+  - type: input
+    id: page
+    attributes:
+      label: Qual página?
+      description: URL ou título da página da documentação.
+    validations:
+      required: true
+
+  - type: textarea
+    id: issue
+    attributes:
+      label: O que está errado, desatualizado ou mal traduzido?
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Sugestão de correção (opcional)
